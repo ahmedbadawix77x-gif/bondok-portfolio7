@@ -166,15 +166,7 @@ export function Portfolio() {
               className="max-w-full max-h-full rounded-2xl shadow-glow-lg border border-white/10 object-contain animate-scale-in" 
               alt="Project View"
             />
-            {/* Download Link for speed/easy access */}
-            <a 
-              href={activeImage} 
-              download 
-              className="absolute top-4 right-4 p-4 rounded-full bg-white/10 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <Maximize2 className="h-6 w-6 text-white" />
-            </a>
+            {/* Remove download link as per user request */}
           </div>
         </div>
       )}
