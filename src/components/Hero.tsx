@@ -50,13 +50,13 @@ export function Hero() {
             </div>
 
             <h1 className="font-display font-black leading-[1.1] tracking-tighter">
-              <span className="block text-4xl md:text-6xl text-foreground">
+              <span className="block text-4xl md:text-5xl lg:text-6xl text-foreground">
                 Hello, I'm{" "}
                 <span className="bg-gradient-to-r from-primary via-purple-400 to-accent bg-clip-text text-transparent animate-gradient">
                   Ahmed
                 </span>
               </span>
-              <span className="block mt-2 text-lg md:text-2xl text-muted-foreground/60 font-medium tracking-tight italic">
+              <span className="block mt-2 text-xl md:text-2xl text-muted-foreground/60 font-medium tracking-tight italic">
                 Graphic Designer & Visual Alchemist
               </span>
             </h1>
@@ -122,9 +122,9 @@ export function Hero() {
               {/* Dynamic Image Glow */}
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-[100px] opacity-20 group-hover:opacity-60 transition-opacity duration-700 animate-pulse" />
               
-              <div className="relative w-72 h-72 md:w-[440px] md:h-[440px] rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden
+              <div className="relative w-64 h-64 md:w-[440px] md:h-[440px] rounded-[3.5rem] overflow-hidden
                 border border-white/5 shadow-2xl transition-all duration-700
-                group-hover:rounded-[2rem] md:group-hover:rounded-[2.5rem] group-hover:scale-[1.01] group-hover:border-primary/30 z-10">
+                group-hover:rounded-[2.5rem] group-hover:scale-[1.01] group-hover:border-primary/30">
                 
                 <img
                   src={profilePhoto}
@@ -142,23 +142,6 @@ export function Hero() {
                   <p className="text-[10px] uppercase tracking-[0.3em] font-black text-white/70">Creative Visionary</p>
                   <p className="text-sm font-bold text-white mt-1 uppercase">Ahmed Ashraf</p>
                 </div>
-              </div>
-
-              {/* ===== Adobe Icons - Professional Placement ===== */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 md:w-24 md:h-24 p-3 md:p-4 rounded-2xl bg-[#001E36]/80 backdrop-blur-xl border border-[#31A8FF]/20 shadow-[0_0_30px_rgba(49,168,255,0.2)] animate-float z-20">
-                <img 
-                  src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" 
-                  alt="Photoshop" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 md:w-24 md:h-24 p-3 md:p-4 rounded-2xl bg-[#330000]/80 backdrop-blur-xl border border-[#FF9A00]/20 shadow-[0_0_30px_rgba(255,154,0,0.2)] animate-float-delayed z-20">
-                <img 
-                  src="https://cdn.simpleicons.org/adobeillustrator/FF9A00" 
-                  alt="Illustrator" 
-                  className="w-full h-full object-contain"
-                />
               </div>
             </div>
           </div>

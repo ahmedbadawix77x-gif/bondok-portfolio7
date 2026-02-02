@@ -8,9 +8,12 @@ import {
   Type,
   Droplet,
 } from "lucide-react";
+import psIcon from "@/assets/icons/ادوبي فوتوشوب.jpg";
+import aiIcon from "@/assets/icons/adobe-illustrator-8515160_640.png";
 
 type Skill = {
-  icon: LucideIcon;
+  icon?: LucideIcon;
+  image?: string;
   name: string;
   description: string;
   color: string;
@@ -18,13 +21,13 @@ type Skill = {
 
 const skills: Skill[] = [
   {
-    icon: ImageIcon,
+    image: psIcon,
     name: "Adobe Photoshop",
     description: "Professional photo manipulation, digital painting & advanced compositing for high-end results.",
     color: "from-blue-500/20 to-cyan-500/20",
   },
   {
-    icon: PenTool,
+    image: aiIcon,
     name: "Adobe Illustrator",
     description: "Precision vector graphics, scalable logo systems & detailed brand asset creation.",
     color: "from-orange-500/20 to-yellow-500/20",
@@ -111,7 +114,7 @@ function SkillCard({
   delay: number;
   isVisible: boolean;
 }) {
-  const { icon: Icon, name, description, color } = skill;
+  const { icon: Icon, image, name, description, color } = skill;
 
   return (
     <div
@@ -128,9 +131,13 @@ function SkillCard({
       {/* Icon Container */}
       <div className="relative w-16 h-16 mb-8 rounded-2xl bg-white/5 
         border border-white/10 flex items-center justify-center text-primary
-        group-hover:scale-110 group-hover:bg-primary group-hover:text-white
-        group-hover:border-primary transition-all duration-500 shadow-xl shadow-black/20">
-        <Icon className="w-8 h-8" />
+        overflow-hidden group-hover:scale-110 transition-all duration-500 
+        shadow-xl shadow-black/20 backdrop-blur-md">
+        {image ? (
+          <img src={image} alt={name} className="w-full h-full object-cover" />
+        ) : (
+          Icon && <Icon className="w-8 h-8" />
+        )}
       </div>
 
       {/* Content */}
