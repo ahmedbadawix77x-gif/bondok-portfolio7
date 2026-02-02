@@ -37,7 +37,7 @@ export function Header() {
             href="#home"
             className="group relative flex items-center"
           >
-            <span className="text-xl font-display font-black tracking-tighter bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:opacity-80 transition-all duration-300 drop-shadow-[0_0_10px_rgba(var(--primary),0.5)]">
+            <span className="text-xl font-display font-black tracking-tighter bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:opacity-80 transition-all duration-300">
               Bondok
             </span>
           </a>

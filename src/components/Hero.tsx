@@ -29,9 +29,8 @@ export function Hero() {
           border border-white/10 rotate-[-15deg] animate-float-delayed opacity-20 z-0" />
 
         {/* Diffused Light Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[160px] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[140px] animate-pulse delay-1000" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -53,7 +52,7 @@ export function Hero() {
             <h1 className="font-display font-black leading-[1.1] tracking-tighter">
               <span className="block text-4xl md:text-6xl text-foreground">
                 Hello, I'm{" "}
-                <span className="bg-gradient-to-r from-primary via-purple-400 to-accent bg-clip-text text-transparent animate-gradient drop-shadow-[0_0_20px_rgba(var(--primary),0.6)]">
+                <span className="bg-gradient-to-r from-primary via-purple-400 to-accent bg-clip-text text-transparent animate-gradient">
                   Ahmed
                 </span>
               </span>
@@ -125,7 +124,7 @@ export function Hero() {
               
               <div className="relative w-72 h-72 md:w-[440px] md:h-[440px] rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden
                 border border-white/5 shadow-2xl transition-all duration-700
-                group-hover:rounded-[2rem] md:group-hover:rounded-[2.5rem] group-hover:scale-[1.01] group-hover:border-primary/30">
+                group-hover:rounded-[2rem] md:group-hover:rounded-[2.5rem] group-hover:scale-[1.01] group-hover:border-primary/30 z-10">
                 
                 <img
                   src={profilePhoto}
@@ -145,23 +144,21 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* Floating Software Icons */}
-              <div className="absolute -top-2 -left-2 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-3 md:p-4 animate-float shadow-glow-sm z-20 flex items-center justify-center group/ps">
+              {/* ===== Adobe Icons - Professional Placement ===== */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 md:w-24 md:h-24 p-3 md:p-4 rounded-2xl bg-[#001E36]/80 backdrop-blur-xl border border-[#31A8FF]/20 shadow-[0_0_30px_rgba(49,168,255,0.2)] animate-float z-20">
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" 
+                  src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" 
                   alt="Photoshop" 
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover/ps:rotate-12 group-hover/ps:scale-110"
+                  className="w-full h-full object-contain"
                 />
-                <div className="absolute inset-0 bg-blue-500/20 blur-xl opacity-0 group-hover/ps:opacity-100 transition-opacity" />
               </div>
 
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-3 md:p-4 animate-float-delayed shadow-glow-sm z-20 flex items-center justify-center group/ai">
+              <div className="absolute -bottom-6 -left-6 w-16 h-16 md:w-24 md:h-24 p-3 md:p-4 rounded-2xl bg-[#330000]/80 backdrop-blur-xl border border-[#FF9A00]/20 shadow-[0_0_30px_rgba(255,154,0,0.2)] animate-float-delayed z-20">
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" 
+                  src="https://cdn.simpleicons.org/adobeillustrator/FF9A00" 
                   alt="Illustrator" 
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover/ai:-rotate-12 group-hover/ai:scale-110"
+                  className="w-full h-full object-contain"
                 />
-                <div className="absolute inset-0 bg-orange-500/20 blur-xl opacity-0 group-hover/ai:opacity-100 transition-opacity" />
               </div>
             </div>
           </div>

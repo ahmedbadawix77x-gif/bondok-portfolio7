@@ -189,9 +189,11 @@ function PortfolioCard({
       onClick={onClick}
       className="group cursor-pointer relative"
     >
+      {/* Dynamic Background Glow */}
+      <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 to-accent/30 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
+      
       <div className="relative aspect-square sm:aspect-[4/3] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 
-        shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 
-        group-hover:shadow-[0_0_30px_rgba(var(--primary),0.3)] group-hover:border-primary/40">
+        shadow-2xl transition-all duration-500 group-hover:shadow-primary/40 group-hover:border-primary/40 z-10">
         <img
           src={project.image}
           alt={project.title}
@@ -200,6 +202,11 @@ function PortfolioCard({
           group-hover:scale-110"
         />
         
+        {/* Animated Glow Border - Premium touch */}
+        <div className="absolute inset-0 rounded-[1.5rem] md:rounded-[2.5rem] p-[1.5px] bg-gradient-to-br from-primary via-accent to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+          <div className="w-full h-full rounded-[1.4rem] md:rounded-[2.4rem] bg-background/50" />
+        </div>
+
         {/* Hover Overlay - More visible on mobile since there is no hover */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent
           opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-500
