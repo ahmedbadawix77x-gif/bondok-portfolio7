@@ -1,3 +1,4 @@
+
 import { useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoPlay from "embla-carousel-autoplay";
@@ -165,6 +166,8 @@ export function Portfolio() {
               src={activeImage} 
               className="max-w-full max-h-full rounded-2xl shadow-glow-lg border border-white/10 object-contain animate-scale-in" 
               alt="Project View"
+              onContextMenu={(e) => e.preventDefault()}
+              onDragStart={(e) => e.preventDefault()}
             />
             {/* Remove download link as per user request */}
           </div>
