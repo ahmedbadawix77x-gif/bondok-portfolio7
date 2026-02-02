@@ -190,7 +190,8 @@ function PortfolioCard({
       className="group cursor-pointer relative"
     >
       <div className="relative aspect-square sm:aspect-[4/3] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 
-        shadow-2xl transition-all duration-500 group-hover:shadow-primary/30 group-hover:border-primary/40">
+        shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 
+        group-hover:shadow-[0_0_30px_rgba(var(--primary),0.3)] group-hover:border-primary/40">
         <img
           src={project.image}
           alt={project.title}

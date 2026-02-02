@@ -6,8 +6,9 @@ export function About() {
 
   return (
     <section id="about" className="relative py-24 md:py-32 overflow-hidden bg-white/[0.01]">
-      {/* Background Decorative Element */}
-      <div className="absolute top-1/4 right-0 w-72 h-72 bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+      {/* Background Orbs */}
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-primary/15 rounded-full blur-[120px] pointer-events-none animate-pulse" />
+      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-accent/10 rounded-full blur-[140px] pointer-events-none animate-pulse delay-700" />
       
       <div className="container mx-auto px-6 relative z-10">
         <div

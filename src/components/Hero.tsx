@@ -29,8 +29,9 @@ export function Hero() {
           border border-white/10 rotate-[-15deg] animate-float-delayed opacity-20 z-0" />
 
         {/* Diffused Light Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[160px] pointer-events-none" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -52,7 +53,7 @@ export function Hero() {
             <h1 className="font-display font-black leading-[1.1] tracking-tighter">
               <span className="block text-4xl md:text-6xl text-foreground">
                 Hello, I'm{" "}
-                <span className="bg-gradient-to-r from-primary via-purple-400 to-accent bg-clip-text text-transparent animate-gradient">
+                <span className="bg-gradient-to-r from-primary via-purple-400 to-accent bg-clip-text text-transparent animate-gradient drop-shadow-[0_0_20px_rgba(var(--primary),0.6)]">
                   Ahmed
                 </span>
               </span>
@@ -142,6 +143,25 @@ export function Hero() {
                   <p className="text-[10px] uppercase tracking-[0.3em] font-black text-white/70">Creative Visionary</p>
                   <p className="text-sm font-bold text-white mt-1 uppercase">Ahmed Ashraf</p>
                 </div>
+              </div>
+
+              {/* Floating Software Icons */}
+              <div className="absolute -top-2 -left-2 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-3 md:p-4 animate-float shadow-glow-sm z-20 flex items-center justify-center group/ps">
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" 
+                  alt="Photoshop" 
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover/ps:rotate-12 group-hover/ps:scale-110"
+                />
+                <div className="absolute inset-0 bg-blue-500/20 blur-xl opacity-0 group-hover/ps:opacity-100 transition-opacity" />
+              </div>
+
+              <div className="absolute -bottom-4 -right-4 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-3 md:p-4 animate-float-delayed shadow-glow-sm z-20 flex items-center justify-center group/ai">
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" 
+                  alt="Illustrator" 
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover/ai:-rotate-12 group-hover/ai:scale-110"
+                />
+                <div className="absolute inset-0 bg-orange-500/20 blur-xl opacity-0 group-hover/ai:opacity-100 transition-opacity" />
               </div>
             </div>
           </div>

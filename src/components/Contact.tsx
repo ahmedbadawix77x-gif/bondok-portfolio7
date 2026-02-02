@@ -13,6 +13,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 export function Contact() {
   const { ref, isVisible } = useScrollAnimation();
@@ -21,17 +22,44 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    toast.success("Message sent! I'll get back to you shortly.");
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+
+    const form = e.currentTarget;
+    
+    try {
+      // Configuration - These will need to be replaced by the user
+      const SERVICE_ID = "YOUR_SERVICE_ID";
+      const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+      const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+
+      if (SERVICE_ID === "YOUR_SERVICE_ID") {
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+        toast.info("Please configure your EmailJS keys in Contact.tsx to receive emails.");
+      } else {
+        await emailjs.sendForm(
+          SERVICE_ID,
+          TEMPLATE_ID,
+          form,
+          PUBLIC_KEY
+        );
+        toast.success("Message sent! I'll get back to you shortly.");
+      }
+    } catch (error) {
+      console.error("Email error:", error);
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+      form.reset();
+    }
   };
 
   return (
     <section id="contact" className="relative py-24 md:py-32 overflow-hidden bg-white/[0.01]">
-      {/* Decorative Blur */}
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
-
+      {/* 3D Floating Elements in Background */}
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full h-[300px] pointer-events-none -z-10">
+        <div className="absolute top-[10%] left-[5%] w-32 h-32 rounded-full border border-white/5 animate-float-3d opacity-20 blur-[1px]" />
+        <div className="absolute bottom-[20%] right-[8%] w-64 h-64 bg-primary/10 blur-[120px] animate-pulse" />
+        <div className="absolute top-0 right-1/4 w-48 h-48 bg-accent/5 blur-[100px] animate-pulse delay-500" />
+      </div>
       <div className="container mx-auto px-6 relative z-10">
         <div
           ref={ref}
@@ -111,6 +139,7 @@ export function Contact() {
                       Full Name
                     </label>
                     <Input
+                      name="user_name"
                       placeholder="Ahmed Ashraf"
                       required
                       className="h-14 bg-white/[0.03] border-white/10 rounded-2xl focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300"
@@ -121,6 +150,7 @@ export function Contact() {
                       Email Address
                     </label>
                     <Input
+                      name="user_email"
                       type="email"
                       placeholder="hello@example.com"
                       required
@@ -134,6 +164,7 @@ export function Contact() {
                     Your Message
                   </label>
                   <Textarea
+                    name="message"
                     placeholder="Tell me about your vision..."
                     rows={6}
                     required
