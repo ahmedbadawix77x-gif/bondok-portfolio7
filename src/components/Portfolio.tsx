@@ -109,7 +109,7 @@ export function Portfolio() {
               <span className="text-primary text-xs tracking-[0.3em] uppercase font-bold">
                 Selected Projects
               </span>
-              <h2 className="text-4xl md:text-6xl font-display font-bold mt-4 tracking-tight">
+              <h2 className="text-3xl md:text-6xl font-display font-bold mt-4 tracking-tight">
                 Creative Portfolio
               </h2>
               <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent mt-8 rounded-full" />
@@ -117,22 +117,22 @@ export function Portfolio() {
 
             {/* Navigation Arrows */}
             <div className="flex gap-4">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={scrollPrev}
-                className="rounded-full w-14 h-14 border-white/10 bg-white/5 backdrop-blur-md hover:bg-primary hover:text-white transition-all duration-300"
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={scrollNext}
-                className="rounded-full w-14 h-14 border-white/10 bg-white/5 backdrop-blur-md hover:bg-primary hover:text-white transition-all duration-300"
-              >
-                <ChevronRight className="h-6 w-6" />
-              </Button>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={scrollPrev}
+                  className="rounded-full w-10 h-10 md:w-14 md:h-14 border-white/10 bg-white/5 backdrop-blur-md hover:bg-primary hover:text-white transition-all duration-300"
+                >
+                  <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
+                </Button>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={scrollNext}
+                  className="rounded-full w-10 h-10 md:w-14 md:h-14 border-white/10 bg-white/5 backdrop-blur-md hover:bg-primary hover:text-white transition-all duration-300"
+                >
+                  <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
+                </Button>
             </div>
           </div>
 
@@ -189,7 +189,7 @@ function PortfolioCard({
       onClick={onClick}
       className="group cursor-pointer relative"
     >
-      <div className="relative aspect-[3/4] sm:aspect-[4/3] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 
+      <div className="relative aspect-square sm:aspect-[4/3] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 
         shadow-2xl transition-all duration-500 group-hover:shadow-primary/30 group-hover:border-primary/40">
         <img
           src={project.image}

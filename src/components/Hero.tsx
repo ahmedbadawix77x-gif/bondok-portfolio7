@@ -50,13 +50,13 @@ export function Hero() {
             </div>
 
             <h1 className="font-display font-black leading-[1.1] tracking-tighter">
-              <span className="block text-4xl md:text-5xl lg:text-6xl text-foreground">
+              <span className="block text-4xl md:text-6xl text-foreground">
                 Hello, I'm{" "}
                 <span className="bg-gradient-to-r from-primary via-purple-400 to-accent bg-clip-text text-transparent animate-gradient">
                   Ahmed
                 </span>
               </span>
-              <span className="block mt-2 text-xl md:text-2xl text-muted-foreground/60 font-medium tracking-tight italic">
+              <span className="block mt-2 text-lg md:text-2xl text-muted-foreground/60 font-medium tracking-tight italic">
                 Graphic Designer & Visual Alchemist
               </span>
             </h1>
@@ -122,9 +122,9 @@ export function Hero() {
               {/* Dynamic Image Glow */}
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-[100px] opacity-20 group-hover:opacity-60 transition-opacity duration-700 animate-pulse" />
               
-              <div className="relative w-64 h-64 md:w-[440px] md:h-[440px] rounded-[3.5rem] overflow-hidden
+              <div className="relative w-72 h-72 md:w-[440px] md:h-[440px] rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden
                 border border-white/5 shadow-2xl transition-all duration-700
-                group-hover:rounded-[2.5rem] group-hover:scale-[1.01] group-hover:border-primary/30">
+                group-hover:rounded-[2rem] md:group-hover:rounded-[2.5rem] group-hover:scale-[1.01] group-hover:border-primary/30">
                 
                 <img
                   src={profilePhoto}
