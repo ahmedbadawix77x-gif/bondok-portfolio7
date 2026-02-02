@@ -7,31 +7,31 @@ import { Button } from "@/components/ui/button";
 
 /* ================= IMAGES ================= */
 
-import gtr911 from "@/assets/portfolio/911 GTR Precision.jpeg";
-import blackFriday from "@/assets/portfolio/Black Friday Luxury Deals.jpeg";
-import burgerBlast from "@/assets/portfolio/Burger Blast Campaign.jpeg";
-import colaBrand from "@/assets/portfolio/Cola Brand – Power & Competition Campaign.jpeg";
-import darkFantasy from "@/assets/portfolio/Dark Fantasy Character Concept.jpeg";
-import energyAd from "@/assets/portfolio/Energy Drink Advertising Concept.jpeg";
-import energyMotion from "@/assets/portfolio/Energy In Motio.jpeg";
-import epicFantasy from "@/assets/portfolio/Epic Fantasy Illustration.jpeg";
-import f1Victory from "@/assets/portfolio/F1 Victory Visual.jpeg";
-import iconicDrop from "@/assets/portfolio/Iconic Drop – Limited Edition.jpeg";
-import kinjiClass from "@/assets/portfolio/Kinji Class – Luxury Motion.jpeg";
-import palestine from "@/assets/portfolio/Palestine Lemon Soda Social Campaign.jpeg";
-import personalBrand from "@/assets/portfolio/Personal Brand – Artistic Touches.jpeg";
-import sushi from "@/assets/portfolio/Premium Sushi Experience.jpeg";
-import ramen from "@/assets/portfolio/Ramen Rush Menu.jpeg";
-import redbullElectric from "@/assets/portfolio/Red Bull Electric Power Visual.jpeg";
-import redbullNeon from "@/assets/portfolio/Red Bull Neon Energy Concept.jpeg";
-import roaster from "@/assets/portfolio/Roaster Order Now.jpeg";
-import sauvage from "@/assets/portfolio/Sauvage Noir.jpeg";
-import supra from "@/assets/portfolio/Supra Velocity.jpeg";
-import theyDontCare from "@/assets/portfolio/They Don’t Care About U.jpeg";
-import timeless from "@/assets/portfolio/Timeless Precisio.jpeg";
-import unleash from "@/assets/portfolio/Unleash The Beas.jpeg";
-import upgrade from "@/assets/portfolio/Upgrade Your Styl.jpeg";
-import urban from "@/assets/portfolio/Urban .jpeg";
+import gtr911 from "@/assets/portfolio/911 GTR Precision.webp";
+import blackFriday from "@/assets/portfolio/Black Friday Luxury Deals.webp";
+import burgerBlast from "@/assets/portfolio/Burger Blast Campaign.webp";
+import colaBrand from "@/assets/portfolio/Cola Brand – Power & Competition Campaign.webp";
+import darkFantasy from "@/assets/portfolio/Dark Fantasy Character Concept.webp";
+import energyAd from "@/assets/portfolio/Energy Drink Advertising Concept.webp";
+import energyMotion from "@/assets/portfolio/Energy In Motio.webp";
+import epicFantasy from "@/assets/portfolio/Epic Fantasy Illustration.webp";
+import f1Victory from "@/assets/portfolio/F1 Victory Visual.webp";
+import iconicDrop from "@/assets/portfolio/Iconic Drop – Limited Edition.webp";
+import kinjiClass from "@/assets/portfolio/Kinji Class – Luxury Motion.webp";
+import palestine from "@/assets/portfolio/Palestine Lemon Soda Social Campaign.webp";
+import personalBrand from "@/assets/portfolio/Personal Brand – Artistic Touches.webp";
+import sushi from "@/assets/portfolio/Premium Sushi Experience.webp";
+import ramen from "@/assets/portfolio/Ramen Rush Menu.webp";
+import redbullElectric from "@/assets/portfolio/Red Bull Electric Power Visual.webp";
+import redbullNeon from "@/assets/portfolio/Red Bull Neon Energy Concept.webp";
+import roaster from "@/assets/portfolio/Roaster Order Now.webp";
+import sauvage from "@/assets/portfolio/Sauvage Noir.webp";
+import supra from "@/assets/portfolio/Supra Velocity.webp";
+import theyDontCare from "@/assets/portfolio/They Don’t Care About U.webp";
+import timeless from "@/assets/portfolio/Timeless Precisio.webp";
+import unleash from "@/assets/portfolio/Unleash The Beas.webp";
+import upgrade from "@/assets/portfolio/Upgrade Your Styl.webp";
+import urban from "@/assets/portfolio/Urban .webp";
 
 /* ================= DATA ================= */
 
@@ -140,7 +140,7 @@ export function Portfolio() {
             <div className="embla overflow-hidden" ref={emblaRef}>
               <div className="embla__container flex -ml-6">
                 {projects.map((project, index) => (
-                  <div key={index} className="embla__slide flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] xl:flex-[0_0_480px] pl-6">
+                  <div key={index} className="embla__slide flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] xl:flex-[0_0_480px] pl-4 sm:pl-6">
                     <PortfolioCard
                       project={project}
                       onClick={() => setActiveImage(project.image)}
@@ -194,7 +194,7 @@ function PortfolioCard({
       onClick={onClick}
       className="group cursor-pointer relative"
     >
-      <div className="relative aspect-[4/3] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 
+      <div className="relative aspect-[3/4] sm:aspect-[4/3] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden border border-white/5 
         shadow-2xl transition-all duration-500 group-hover:shadow-primary/30 group-hover:border-primary/40">
         <img
           src={project.image}
@@ -204,15 +204,15 @@ function PortfolioCard({
           group-hover:scale-110"
         />
         
-        {/* Hover Overlay */}
+        {/* Hover Overlay - More visible on mobile since there is no hover */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent
-          opacity-0 group-hover:opacity-100 transition-all duration-500
+          opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all duration-500
           p-6 md:p-8 flex flex-col justify-end">
-          <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-primary text-xs uppercase tracking-widest font-bold mb-2 block">
+          <div className="translate-y-0 sm:translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <span className="text-primary text-[10px] sm:text-xs uppercase tracking-widest font-bold mb-1 sm:mb-2 block">
               {project.category}
             </span>
-            <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-tight">
               {project.title}
             </h3>
           </div>
