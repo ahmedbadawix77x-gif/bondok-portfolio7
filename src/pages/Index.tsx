@@ -1,3 +1,4 @@
+import { Preloader } from "@/components/Preloader";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
@@ -10,6 +11,7 @@ import { Footer } from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <Preloader />
       <Header />
       <main>
         <Hero />

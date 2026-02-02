@@ -28,7 +28,7 @@ export function Footer() {
             </a>
 
             <a
-              href="https://www.facebook.com/share/1b8WrN6H5N/?mibextid=wwXIfr"
+              href="https://www.facebook.com/AhmedBondok30?mibextid=wwXIfr"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
